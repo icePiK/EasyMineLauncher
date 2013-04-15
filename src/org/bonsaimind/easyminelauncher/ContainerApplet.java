@@ -295,5 +295,12 @@ public class ContainerApplet extends Applet
 
 		// Add it...what else?
 		add(minecraftApplet, "Center");
+		
+		/*
+		 *  FocusFix: minecraftApplet fails to take focus for some reason when launching EasyMineLauncher
+		 *  in Microsoft Windows 8 when launching from visual basic application. (This appears to fix.)
+		 */
+		 
+		minecraftApplet.requestFocusInWindow();
 	}
 }
